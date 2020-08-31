@@ -1,0 +1,87 @@
+<!-- 
+Zrób szachownicę na 3 różne sposoby
+- wykorzystująć inline-block dla każdego pola
+- wykorzystująć float dla kązdego pola
+- wykorzystując position:absolute dla każdego pola
+
+W zadaniu 1 zrób inline-block
+
+Dodatkowo wycentruj cały kontener (div z klasą 'board') i określ jego wielkości tak by był on kwadratem, który ma 30% szerokości okna przeglądarki i dodatkowo border: 10px czarny.
+
+Tekst ma być pod szachownicą.
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Szachownica Inline-block</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .board {
+            box-sizing: border-box;
+            position: absolute;
+            background-color: yellow;
+            width: 30vh;
+            height: 30vh;
+            top: calc(50% - 15vh);
+            left: calc(50% - 15vh);
+            border: 10px solid black;
+            font-size: 0;
+        }
+
+        #one {
+            display: inline-block;
+            background-color: red;
+            width: 50%;
+            height: 50%;
+        }
+
+        #two {
+            display: inline-block;
+            background-color: white;
+            width: 50%;
+            height: 50%;
+        }
+
+        #three {
+            display: inline-block;
+            background-color: white;
+            width: 50%;
+            height: 50%;
+        }
+
+        #four {
+            display: inline-block;
+            background-color: red;
+            width: 50%;
+            height: 50%;
+        }
+
+        h1 {
+            position: absolute;
+            width: 100%;
+            text-transform: lowercase;
+            text-align: center;
+            bottom: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="board">
+        <span id="one"></span>
+        <span id="two"></span>
+        <span id="three"></span>
+        <span id="four"></span>
+    </div>
+    <h1>Szachownica "inline-block"</h1>
+</body>
+
+</html>
